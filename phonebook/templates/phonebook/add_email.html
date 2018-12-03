@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add email</title>
+</head>
+<body>
+    <h1>Add email address to {{ person.name }} {{ person.surname }} </h1>
+
+    <form method="post">
+        <input type="text" name="email" placeholder="email" value="{{ email.email }}">
+        <input type="text" name="email_type" placeholder="private/business" value="{{ email.email_type }}">
+        <button type="submit">Add email address</button>
+        {% csrf_token %}
+    </form>
+
+</body>
+</html>

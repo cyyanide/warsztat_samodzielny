@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All persons </title>
+</head>
+<body>
+<ul>
+    {% for person in persons %}
+
+           <li> <a href="show/{{ person.id }}"> {{ person.name }} {{ person.surname }} </a>
+                <form action="/modify/{{ person.id }}" method="get">
+                    <button type="submit">Modify contact</button> </form>
+                <form action="/delete/{{ person.id }}" method="get">
+                    <button type="submit">Delete contact</button></form></li>
+
+    {% endfor %}
+
+<form action="/new" method="get">
+    <button type="submit">Add new contact</button>
+</form>
+
+</ul>
+
+</body>
+</html>

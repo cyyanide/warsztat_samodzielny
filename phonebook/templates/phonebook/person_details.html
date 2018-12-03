@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person details</title>
+</head>
+<body>
+
+<div>
+Name:    {{ person.name }}<br>
+Surname:    {{ person.surname }}<br>
+Description:    {{ person.description }}
+</div>
+
+<div>
+    Email: {{ person.email.email }} <br>
+    Phone: {{ person.phone.number }} <br>
+    Address: {{ person.address }}
+</div>
+<div>
+    <form action="/modify/{{ person.id }}" method="get">
+        <button type="submit">Modify contact</button>
+    </form>
+</div>
+</body>
+</html>

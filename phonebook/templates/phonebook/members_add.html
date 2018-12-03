@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add members to your group</title>
+</head>
+<body>
+<form method="post">
+    <h1>Add a new person to your group {{ group.name }}</h1>
+    <form method="post">
+        <label>Members:
+            <ol>
+                {% for person in persons %}
+                <li>{{ person.name }} {{ person.surname }}</li>
+                {% endfor %}
+            </ol>
+        </label><br>
+        <label>Choose a person from the list you want to add to the group:
+            <select name="member">
+                {% for person in all_person %}
+                <option value="{{ person.id }}">{{ person.name }} {{ person.surname }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        <button type="submit">Add person</button>
+        {% csrf_token %}
+    </form>
+
+</body>
+</html>

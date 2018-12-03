@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit contact</title>
+</head>
+<body>
+    <form method="post">
+        <input type="text" name="name" value="{{ person.name }}">
+        <input type="text" name="surname" value="{{ person.surname }}">
+        <input type="text" name="description" value="{{ person.description }}">
+        <button type="submit">Save changes</button>
+        {% csrf_token %}
+
+    </form>
+
+<form action="{{ person.id }}/addaddress" method="get">
+    <button type="submit">Add address</button></form>
+<form action="{{ person.id }}/addphone" method="get">
+    <button type="submit">Add phone</button></form>
+<form action="{{ person.id }}/addemail" method="get">
+    <button type="submit">Add email</button></form>
+
+</body>
+</html>

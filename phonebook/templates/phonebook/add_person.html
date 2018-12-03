@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add person</title>
+</head>
+<body>
+    <form method="post">
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="surname" placeholder="Surname">
+        <input type="text" name="description" placeholder="Description">
+        <button type="submit">Save</button>
+        {% csrf_token %}
+    </form>
+</body>
+</html>

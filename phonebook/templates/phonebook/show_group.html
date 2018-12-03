@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show group</title>
+</head>
+<body>
+
+<h1> Group: {{ group.name }}</h1>
+  <ul>
+        {% for person in persons %}
+            <li>{{ member.name }} {{ member.surname }}</li>
+        {% endfor %}
+  </ul>
+</body>
+</html>
+
